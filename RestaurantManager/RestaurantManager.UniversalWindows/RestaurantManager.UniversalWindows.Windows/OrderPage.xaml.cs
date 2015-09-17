@@ -25,6 +25,24 @@ namespace RestaurantManager.UniversalWindows
         public OrderPage()
         {
             this.InitializeComponent();
+            btAddToOrder.Click += Button_Click;
+            btHome.Click += Button_Click;
+            btSubmitOrder.Click += Button_Click;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var bt = sender as Button;
+            if (bt == btHome)
+            {
+                var page = new MainPage();
+                this.Frame.Navigate(typeof(MainPage), page);
+            } else if(bt == btAddToOrder)
+            {
+            } else if(bt == btSubmitOrder)
+            {
+            }
         }
     }
+
 }

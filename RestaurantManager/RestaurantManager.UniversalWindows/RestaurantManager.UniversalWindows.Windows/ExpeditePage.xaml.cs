@@ -25,6 +25,17 @@ namespace RestaurantManager.UniversalWindows
         public ExpeditePage()
         {
             this.InitializeComponent();
+            btHome.Click +=Button_Click;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var bt = sender as Button;
+            if (bt == btHome)
+            {
+                var page = new MainPage();
+                this.Frame.Navigate(typeof(MainPage), page);
+            }
         }
     }
 }

@@ -22,9 +22,30 @@ namespace RestaurantManager.UniversalWindows
     /// </summary>
     public sealed partial class MainPage : Page
     {
+        
         public MainPage()
         {
             this.InitializeComponent();
+            btSubmitOrder.Click += Button_Click;
+            btGoToOrders.Click += Button_Click;
+        }
+
+
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            var bt = (sender as Button);
+            
+            if (bt == btSubmitOrder)
+            {
+                var page = new OrderPage();
+                this.Frame.Navigate(typeof(OrderPage),page);
+                
+            } else if (bt == btGoToOrders)
+            {
+                var page = new ExpeditePage();
+                this.Frame.Navigate(typeof(ExpeditePage), page);
+            }
         }
     }
 }

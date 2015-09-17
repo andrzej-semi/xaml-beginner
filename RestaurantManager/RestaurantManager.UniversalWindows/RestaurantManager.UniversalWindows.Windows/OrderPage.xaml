@@ -6,7 +6,13 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
-
+    <Page.TopAppBar>
+        <AppBar>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
+                <AppBarButton x:Name="btHome" Icon="Home" Label="Home"/>
+            </StackPanel>
+        </AppBar>
+    </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
         <Grid.RowDefinitions>
@@ -23,7 +29,10 @@
         </Grid.ColumnDefinitions>
         <TextBlock Text="Special Requests:" Foreground="White" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center"/>
         <TextBlock Text="Order Items:" Foreground="White" Grid.Column="2" Grid.Row="1" HorizontalAlignment="Center" VerticalAlignment="Center" />
-        <TextBlock Text="**Add to Order**" Foreground="White" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-        <TextBlock Text="**Submit Order**" Foreground="White" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <Button x:Name="btAddToOrder" Grid.Column="0" Grid.Row="4" HorizontalAlignment="Center" VerticalAlignment="Center" Content="Add to Order"/>
+        <Button x:Name="btSubmitOrder" Content="Submit Order" Grid.Column="1" Grid.Row="4" Grid.ColumnSpan="2" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <ListView Grid.Column="2" Grid.Row="2" Margin="10"></ListView>
+        <ListView Grid.Column="0" Grid.Row="1" Grid.RowSpan="2" Margin="10"></ListView>
     </Grid>
+
 </Page>
