@@ -1,4 +1,5 @@
-﻿using System;
+﻿using RestaurantManager.Models;
+using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
@@ -26,6 +27,7 @@ namespace RestaurantManager.UniversalWindows
         public MainPage()
         {
             this.InitializeComponent();
+            
             btSubmitOrder.Click += Button_Click;
             btGoToOrders.Click += Button_Click;
         }

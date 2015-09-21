@@ -5,20 +5,23 @@
     xmlns:local="using:RestaurantManager.UniversalWindows"
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    DataContext="{StaticResource DataManager}"
     mc:Ignorable="d">
     <Page.TopAppBar>
-        <AppBar>
+        <AppBar IsOpen="True" IsSticky="True">
             <StackPanel Orientation="Horizontal" HorizontalAlignment="Right">
                 <AppBarButton x:Name="btHome" Icon="Home" Label="Home"/>
             </StackPanel>
         </AppBar>
     </Page.TopAppBar>
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        
         <Grid.RowDefinitions>
             <RowDefinition Height="*" />
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
-        <GridView Grid.Row="0" Margin="10"/>
+        
+        <GridView Grid.Row="0" Margin="10,100,10,10" ItemsSource="{Binding CurrentlySelectedMenuItems}" />
         <Button x:Name="btClearOrders" Content="Clear All Orders"  Grid.Row="1" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5"/>
     </Grid>
 </Page>
