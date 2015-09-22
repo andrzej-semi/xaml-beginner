@@ -21,7 +21,7 @@
             <RowDefinition Height="Auto" />
         </Grid.RowDefinitions>
         
-        <GridView Grid.Row="0" Margin="10,100,10,10" ItemsSource="{Binding CurrentlySelectedMenuItems}" />
+        <GridView Grid.Row="0" Margin="10,100,10,10" ItemsSource="{Binding OrderItems}" />
         <Button x:Name="btClearOrders" Content="Clear All Orders"  Grid.Row="1" Foreground="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0,5"/>
     </Grid>
 </Page>
